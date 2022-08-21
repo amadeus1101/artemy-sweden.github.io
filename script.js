@@ -10,10 +10,10 @@ function menuClick() {
   nav.classList.toggle("active-nav");
 }
 
-let frame = document.querySelector(".deco-frame");
-let cross = document.querySelector(".deco-cross");
-let ellipse = document.querySelector(".deco-ellipse");
-let rumb = document.querySelector(".deco-rumb");
+let frame = document.getElementById("frame");
+let cross = document.getElementById("cross");
+let ellipse = document.getElementById("ellipse");
+let rumb = document.getElementById("rumb");
 
 // window.addEventListener("scroll", function () {
 //   let value = window.scrollY;
@@ -89,8 +89,16 @@ window.onload = function () {
     observer.observe(document.querySelector(".about"));
 
     function setParallaxItemsStyle(scrollTopPercent) {
-      frame.style.top = `${scrollTopPercent}vh`;
-      cross.style.top = `${scrollTopPercent}vh`;
+      frame.parentElement.style.cssText = `transform: translate(0%, ${
+        scrollTopPercent * 7
+      }%);`;
+      cross.parentElement.style.cssText = `transform: translate(0%, ${
+        scrollTopPercent * 3
+      }%);`;
+      ellipse.parentElement.style.cssText = `transform: translate(0%, ${scrollTopPercent}%);`;
+      rumb.parentElement.style.cssText = `transform: translate(0%, ${
+        scrollTopPercent * 2
+      }%);`;
     }
   }
 };

@@ -144,34 +144,44 @@ section.intro {
 .deco-frame {
   top: 20vh;
   right: 3vw;
+  z-index: 200;
+}
+.deco-frame svg {
   width: 54px;
   height: 54px;
   opacity: 0.5;
-  z-index: 200;
 }
 .deco-frame path {
   fill: #61dbfb;
 }
 .deco-cross {
-  width: 52px;
-  height: 52px;
   right: 30vw;
   top: 30vh;
+}
+.deco-cross svg {
+  width: 52px;
+  height: 52px;
+
   opacity: 0.5;
 }
 .deco-ellipse {
-  width: 40px;
-  height: 40px;
   right: 50vw;
   top: 55vh;
+}
+.deco-ellipse svg {
+  width: 40px;
+  height: 40px;
+
   opacity: 0.5;
 }
 .deco-rumb {
+  right: 30vw;
+  top: 85vh;
+}
+.deco-rumb svg {
   width: 30px;
   height: 30px;
   opacity: 0.5;
-  right: 30vw;
-  top: 85vh;
 }
 
 .intro__inner {
