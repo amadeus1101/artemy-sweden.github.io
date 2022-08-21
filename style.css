@@ -383,58 +383,85 @@ section.works {
   padding: 70px 20px;
   background: #282c34;
 }
+
 .works__inner {
-  max-width: 1440px;
+  max-width: 1024px;
   margin: 80px auto 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
+.works__item {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  background: #20232a;
+  transition: 0.5s;
+  border-radius: 10px;
+  position: relative;
+}
+.works__item::before {
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background: #d00000;
+  content: "";
+}
+.works__item:hover::before {
+  background: #61dbfb;
+}
+.works__item:hover {
+  transform: translateY(-10px);
+}
 .works__item p {
-  font-size: 18px;
-  color: #fff;
-  text-align: center;
-  margin-top: 12px;
+  color: #888888;
+  letter-spacing: 0.04em;
+  line-height: 170%;
+  margin-top: 20px;
 }
 .works__img {
   position: relative;
-  width: 368px;
-  height: 207px;
-  text-align: center;
+  width: 100%;
+  height: 250px;
   overflow: hidden;
 }
-
-.works__item img {
+.works__img img {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 8;
-  transition: 2s;
+  filter: grayscale(1);
+  transition: 0.5s;
   cursor: pointer;
 }
-
-.works__item .works__popup {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-weight: 700;
-  font-size: 24px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #ff3146a7;
-  z-index: 9;
-  transition: 0.5s;
+.works__img img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
 }
-
-.works__item img:hover {
-  transform: scale(1.5);
+.works__item .tags {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.works__item .tags span.red {
+  color: #e34c26;
+}
+.works__item .tags span.blue {
+  color: #264de4;
+}
+.works__item .tags span.yellow {
+  color: #f0db4f;
+}
+.works__item .tags span.green {
+  color: #7af04f;
 }
 /**          media            */
 
@@ -499,6 +526,9 @@ section.works {
   }
   .btn {
     border-color: #ff3146;
+  }
+  .about__inner {
+    flex-direction: column;
   }
 }
 @media (max-width: 560px) {
