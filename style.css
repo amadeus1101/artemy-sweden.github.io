@@ -50,7 +50,7 @@ header nav ul li {
 header nav ul li a::after {
   transition: 0.5s;
   display: block;
-  transform: translateX(-100%);
+  transform: translateX(-110%);
   content: "";
   width: 100%;
   height: 2px;
@@ -403,7 +403,7 @@ section.works {
   flex-wrap: wrap;
 }
 .works__item {
-  width: 300px;
+  width: 390px;
   padding: 10px;
   margin: 10px;
   background: #20232a;
@@ -491,6 +491,9 @@ section.works {
   .intro__text .btn {
     font-size: 16px;
     padding: 10px 44px;
+  }
+  .works__item {
+    width: 300px;
   }
 }
 @media (max-width: 767.98px) {
