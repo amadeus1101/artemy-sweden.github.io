@@ -520,19 +520,17 @@ section.works {
     text-shadow: -8px -5px #00fde8, 9px 5px #ff3146;
     margin-left: 30px;
   }
-  .intro__deco .deco-items svg {
-    width: 20px;
-    height: 20px;
-  }
-  .deco-ellipse {
-    top: 62vh;
+  #frame,
+  #cross,
+  #ellipse,
+  #rumb {
     width: 32px;
     height: 32px;
   }
-  .deco-frame {
-    width: 36px;
-    height: 36px;
+  #ellipse {
+    top: 62vh;
   }
+
   .btn::before,
   .btn::after {
     display: none;
@@ -575,8 +573,6 @@ section.works {
   .deco-cross {
     left: 12vw;
     top: 25vh;
-    width: 40px;
-    height: 40px;
   }
   .deco-rumb {
     bottom: 12vh;
@@ -600,8 +596,5 @@ section.works {
 @media (max-width: 374.98px) {
   .intro__text h1 {
     font-size: 40px;
-  }
-  .deco-rumb {
-    display: none;
   }
 }
