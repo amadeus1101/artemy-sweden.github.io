@@ -12,6 +12,15 @@ body {
   font-weight: 400;
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #425757;
+}
+::-webkit-scrollbar-thumb {
+  background: #20232a;
+}
 a {
   text-decoration: none;
   color: #fff;
@@ -46,7 +55,9 @@ header nav ul li {
   position: relative;
   overflow-x: hidden;
 }
-
+header nav ul li a {
+  cursor: pointer;
+}
 header nav ul li a::after {
   transition: 0.5s;
   display: block;
@@ -252,20 +263,173 @@ section.intro {
   font-size: 250px;
   color: #fff;
   font-weight: 700;
-  animation: logoFadeIn 0.5s ease-in;
-  text-shadow: -10px -7px #00fde8, 11px 6px #ff3146;
+  padding: 30px;
+  /* font-family: "Poppins", sans-serif; */
+  animation: logoFadeIn 2s linear;
+  /* text-shadow: -10px -7px #00fde8, 11px 6px #ff3146; */
   z-index: 300;
+  position: relative;
+  animation: logoFadeIn 2s linear;
 }
 @keyframes logoFadeIn {
   0% {
-    text-shadow: 0 0 #00fde8, 0 0 #ff3146;
     opacity: 0;
   }
   100% {
-    text-shadow: -10px -7px #00fde8, 11px 6px #ff3146;
     opacity: 1;
   }
 }
+.intro__logo::before,
+.intro__logo::after {
+  content: "A";
+  color: #fff;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  padding: 30px;
+}
+.intro__logo::before {
+  left: 5px;
+  text-shadow: -8px 0 #ff3146;
+  animation: glitch-before 2s linear 0s infinite alternate;
+}
+.intro__logo::after {
+  left: -5px;
+  text-shadow: -8px 0 #00fde8;
+  animation: glitch-after 2s linear 0s infinite alternate;
+}
+
+@keyframes glitch-before {
+  0% {
+    clip: rect(18px, 350px, 94px, 30px);
+  }
+  5% {
+    clip: rect(26px, 350px, 135px, 30px);
+  }
+  10% {
+    clip: rect(178px, 350px, 167px, 30px);
+  }
+  15% {
+    clip: rect(228px, 350px, 33px, 30px);
+  }
+  20% {
+    clip: rect(240px, 350px, 217px, 30px);
+  }
+  25% {
+    clip: rect(213px, 350px, 169px, 30px);
+  }
+  30% {
+    clip: rect(103px, 350px, 88px, 30px);
+  }
+  35% {
+    clip: rect(211px, 350px, 28px, 30px);
+  }
+  40% {
+    clip: rect(286px, 350px, 38px, 30px);
+  }
+  45% {
+    clip: rect(161px, 350px, 65px, 30px);
+  }
+  50% {
+    clip: rect(331px, 350px, 13px, 30px);
+  }
+  55% {
+    clip: rect(224px, 350px, 74px, 30px);
+  }
+  60% {
+    clip: rect(242px, 350px, 162px, 30px);
+  }
+  65% {
+    clip: rect(264px, 350px, 87px, 30px);
+  }
+  70% {
+    clip: rect(50px, 350px, 209px, 30px);
+  }
+  75% {
+    clip: rect(320px, 350px, 69px, 30px);
+  }
+  80% {
+    clip: rect(173px, 350px, 191px, 30px);
+  }
+  85% {
+    clip: rect(206px, 350px, 22px, 30px);
+  }
+  90% {
+    clip: rect(96px, 350px, 191px, 30px);
+  }
+  95% {
+    clip: rect(19px, 350px, 168px, 30px);
+  }
+  100% {
+    clip: rect(213px, 350px, 87px, 30px);
+  }
+}
+@keyframes glitch-after {
+  0% {
+    clip: rect(54px, 350px, 216px, 30px);
+  }
+  5% {
+    clip: rect(111px, 350px, 105px, 30px);
+  }
+  10% {
+    clip: rect(57px, 350px, 108px, 30px);
+  }
+  15% {
+    clip: rect(239px, 350px, 150px, 30px);
+  }
+  20% {
+    clip: rect(159px, 350px, 65px, 30px);
+  }
+  25% {
+    clip: rect(198px, 350px, 163px, 30px);
+  }
+  30% {
+    clip: rect(30px, 350px, 38px, 30px);
+  }
+  35% {
+    clip: rect(41px, 350px, 109px, 30px);
+  }
+  40% {
+    clip: rect(241px, 350px, 180px, 30px);
+  }
+  45% {
+    clip: rect(258px, 350px, 13px, 30px);
+  }
+  50% {
+    clip: rect(205px, 350px, 25px, 30px);
+  }
+  55% {
+    clip: rect(342px, 350px, 73px, 30px);
+  }
+  60% {
+    clip: rect(63px, 350px, 12px, 30px);
+  }
+  65% {
+    clip: rect(283px, 350px, 44px, 30px);
+  }
+  70% {
+    clip: rect(193px, 350px, 246px, 30px);
+  }
+  75% {
+    clip: rect(222px, 350px, 187px, 30px);
+  }
+  80% {
+    clip: rect(386px, 350px, 28px, 30px);
+  }
+  85% {
+    clip: rect(115px, 350px, 140px, 30px);
+  }
+  90% {
+    clip: rect(65px, 350px, 101px, 30px);
+  }
+  95% {
+    clip: rect(251px, 350px, 127px, 30px);
+  }
+  100% {
+    clip: rect(59px, 350px, 235px, 30px);
+  }
+}
+
 .intro__deco {
   position: absolute;
   bottom: 2vh;
@@ -505,7 +669,7 @@ section.works {
     left: 0;
     width: 100%;
     transition: 0.5s;
-    min-height: 100vh;
+    height: 100vh;
     justify-content: space-evenly;
     padding: 15vh 0;
     align-items: center;
@@ -517,7 +681,7 @@ section.works {
   }
   .intro__logo {
     font-size: 180px;
-    text-shadow: -8px -5px #00fde8, 9px 5px #ff3146;
+    /* text-shadow: -8px -5px #00fde8, 9px 5px #ff3146; */
     margin-left: 30px;
   }
   #frame,
@@ -583,6 +747,12 @@ section.works {
   }
   .about__inner {
     margin-top: 40px;
+  }
+  .about__text p {
+    font-size: 16px;
+  }
+  .about__text p:not(:first-child) {
+    margin-top: 20px;
   }
   .skills {
     margin-top: 30px;

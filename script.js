@@ -9,12 +9,45 @@ function menuClick() {
   menu.classList.toggle("active-menu");
   nav.classList.toggle("active-nav");
 }
+function menuClose() {
+  menu.classList.remove("active-menu");
+  nav.classList.remove("active-nav");
+}
+
+function scrollTo(element) {
+  window.scroll({
+    left: 0,
+    top: element.offsetTop,
+    behavior: "smooth",
+  });
+}
+let link1 = document.getElementById("link1");
+let link2 = document.getElementById("link2");
+let link3 = document.getElementById("link3");
+let link4 = document.getElementById("link4");
+let sec1 = document.getElementById("intro");
+let sec2 = document.getElementById("about");
+let sec3 = document.getElementById("works");
+let sec4 = document.getElementById("contact");
+
+link1.addEventListener("click", function () {
+  scrollTo(sec1);
+});
+link2.addEventListener("click", function () {
+  scrollTo(sec2);
+});
+link3.addEventListener("click", function () {
+  scrollTo(sec3);
+});
+link4.addEventListener("click", function () {
+  scrollTo(sec4);
+});
 
 let frame = document.getElementById("frame");
 let cross = document.getElementById("cross");
 let ellipse = document.getElementById("ellipse");
 let rumb = document.getElementById("rumb");
-
+let logo = document.querySelector(".intro__logo");
 // window.addEventListener("scroll", function () {
 //   let value = window.scrollY;
 //   frame.style.transform = `translateX(${value * 0.1}%) translateY(${
@@ -32,6 +65,7 @@ window.onload = function () {
     const forCross = 4;
     const forEllipse = 6;
     const forRumb = 2;
+    // const forLogo = 11;
 
     var speed = 0.7;
 
@@ -59,6 +93,9 @@ window.onload = function () {
       rumb.style.cssText = `transform: translate(${posX / forRumb}%, ${
         posY / forRumb
       }%);`;
+      // logo.style.cssText = `transform: translate(${posX / forLogo}%, ${
+      //   posY / forLogo
+      // }%);`;
 
       requestAnimationFrame(mouseParallaxStyle);
     }
@@ -90,7 +127,7 @@ window.onload = function () {
 
     function setParallaxItemsStyle(scrollTopPercent) {
       frame.parentElement.style.cssText = `transform: translate(0%, ${
-        scrollTopPercent * 7
+        scrollTopPercent * 8
       }%);`;
       cross.parentElement.style.cssText = `transform: translate(0%, ${
         scrollTopPercent * 3

@@ -19,10 +19,10 @@
       <nav>
         <a href="#" class="logo">A</a>
         <ul class="navigation">
-          <li><a href="#intro">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a onclick="menuClose()" id="link1">Home</a></li>
+          <li><a onclick="menuClose()" id="link2">About</a></li>
+          <li><a onclick="menuClose()" id="link3">Works</a></li>
+          <li><a onclick="menuClose()" id="link4">Contact</a></li>
         </ul>
         <div class="menu" onclick="menuClick()">
           <div class="menu-item"></div>
@@ -50,7 +50,7 @@
         </div>
       </nav>
     </header>
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="deco-frame">
         <svg
           id="frame"
@@ -252,7 +252,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <h2 class="title">About me</h2>
       <p class="subtitle">Some info about me and my skills</p>
       <div class="about__inner">
@@ -347,7 +347,7 @@
       </div> -->
       </div>
     </section>
-    <section class="works">
+    <section class="works" id="works">
       <h2 class="title">My works</h2>
       <p class="subtitle">
         Here you can see some examples of my latest works. NOTE: This is not my
