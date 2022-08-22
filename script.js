@@ -1,8 +1,21 @@
 window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 0);
-});
 
+  var sliderSpeed = 30;
+  header.classList.toggle("sticky", window.scrollY > 0);
+  // if (
+  //   window.scrollY > window.innerHeight * 1.1 &&
+  //   window.screenY < window.innerHeight * 2
+  // ) {
+  //   if (window.innerWidth < 800 && window.innerWidth > 600) {
+  //     sliderSpeed = 20;
+  //   }
+  //   skills.style.marginLeft = `-${
+  //     (window.scrollY / window.innerWidth) * 20 - 16
+  //   }%`;
+  // }
+});
+let skills = document.getElementById("first-ph");
 let menu = document.querySelector(".menu");
 let nav = document.querySelector(".navigation");
 function menuClick() {
@@ -75,24 +88,27 @@ window.onload = function () {
       coordYpercent = 0;
 
     function mouseParallaxStyle() {
-      const distX = coordXpercent - posX;
-      const distY = coordYpercent - posY;
+      if (window.innerWidth > 768) {
+        const distX = coordXpercent - posX;
+        const distY = coordYpercent - posY;
 
-      posX = posX + distX * speed;
-      posY = posY + distY * speed;
+        posX = posX + distX * speed;
+        posY = posY + distY * speed;
 
-      frame.style.cssText = `transform: translate(${posX / forFrame}%, ${
-        posY / forFrame
-      }%);`;
-      cross.style.cssText = `transform: translate(${posX / forCross}%, ${
-        posY / forCross
-      }%);`;
-      ellipse.style.cssText = `transform: translate(${posX / forEllipse}%, ${
-        posY / forEllipse
-      }%);`;
-      rumb.style.cssText = `transform: translate(${posX / forRumb}%, ${
-        posY / forRumb
-      }%);`;
+        frame.style.cssText = `transform: translate(${posX / forFrame}%, ${
+          posY / forFrame
+        }%);`;
+        cross.style.cssText = `transform: translate(${posX / forCross}%, ${
+          posY / forCross
+        }%);`;
+        ellipse.style.cssText = `transform: translate(${posX / forEllipse}%, ${
+          posY / forEllipse
+        }%);`;
+        rumb.style.cssText = `transform: translate(${posX / forRumb}%, ${
+          posY / forRumb
+        }%);`;
+      }
+
       // logo.style.cssText = `transform: translate(${posX / forLogo}%, ${
       //   posY / forLogo
       // }%);`;

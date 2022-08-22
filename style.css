@@ -538,18 +538,20 @@ p.subtitle {
   text-shadow: -3px -2px #00fde8, 4px 1px #ff3146;
 }
 .skills {
-  max-width: 1024px;
+  max-width: 1440px;
   overflow-x: hidden;
-  margin: 150px auto 50px;
+  margin: 120px auto 50px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   transition: 0.5s;
-  justify-content: space-around;
 }
 .skill-item {
-  transition: 0.3s;
+  transition: 0.5s;
+  margin: 30px 40px;
 }
 .skills .skill-item img {
-  width: 60px;
+  width: 55px;
   pointer-events: none;
   user-select: none;
 }
@@ -659,6 +661,9 @@ section.works {
   .works__item {
     width: 300px;
   }
+  .skills .skill-item img {
+    width: 44px;
+  }
 }
 @media (max-width: 767.98px) {
   header nav ul {
@@ -707,8 +712,10 @@ section.works {
     margin-top: 70px;
   }
   .skills {
-    margin-top: 70px;
-    margin-bottom: 30px;
+    margin: 70px auto 30px;
+  }
+  .skills .skill-item {
+    margin: 20px 30px;
   }
   .works__inner {
     margin-top: 50px;
@@ -757,6 +764,9 @@ section.works {
   .skills {
     margin-top: 30px;
     margin-bottom: 0;
+  }
+  .skills .skill-item {
+    margin: 10px 15px;
   }
   section.about,
   section.works {
