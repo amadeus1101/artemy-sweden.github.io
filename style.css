@@ -119,8 +119,9 @@ header.sticky {
 }
 .active-nav {
   display: flex;
-  transform: translateY(100%);
+  /* transform: translateY(100%); */
   transition: 0.5s;
+  min-height: 100vh;
 }
 header .switcher {
   z-index: 1500;
@@ -749,6 +750,14 @@ footer {
 .footer-crosses svg {
   width: 30px;
 }
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.social-media img {
+  width: 32px;
+}
 /**          media            */
 
 @media (max-width: 1023.98px) {
@@ -796,11 +805,14 @@ footer {
     transition: 0.5s;
     flex-direction: column;
     position: fixed;
-    top: -100%;
+    /* top: -100%; */
+    top: 0;
+    overflow-y: hidden;
+    display: none;
     left: 0;
     width: 100%;
     transition: 0.5s;
-    height: 100vh;
+    min-height: 0;
     justify-content: space-evenly;
     padding: 15vh 0;
     align-items: center;
