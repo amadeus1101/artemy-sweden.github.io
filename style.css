@@ -87,7 +87,8 @@ header nav .logo {
   z-index: 1500;
 }
 header.sticky {
-  background: #20232a;
+  /* background: #20232a; */
+  background: #282c34;
   transition: 0.5s;
 }
 .menu {
@@ -99,6 +100,7 @@ header.sticky {
   cursor: pointer;
   position: relative;
   z-index: 1500;
+  /* margin-left: 8px; */
 }
 .menu-item {
   width: 100%;
@@ -118,17 +120,16 @@ header.sticky {
   transform: rotate(-45deg);
 }
 .active-nav {
-  display: flex;
-  /* transform: translateY(100%); */
-  transition: 0.5s;
-  min-height: 100vh;
+  opacity: 1;
+  transition: 1s;
+  transform: translateY(100vh);
 }
 header .switcher {
   z-index: 1500;
   cursor: pointer;
 }
 header .switcher svg {
-  width: 40px;
+  width: 32px;
   height: 20px;
 }
 header .switcher svg circle {
@@ -138,7 +139,7 @@ header .switcher svg:hover circle {
   transform: translateX(24px);
 }
 section.intro {
-  background: #282c34;
+  background: #20232a;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -226,6 +227,8 @@ section.intro {
 .btn span {
   z-index: 3;
   position: relative;
+  letter-spacing: 2px;
+  transition: 0.5s;
 }
 .btn::before {
   transition: 0.5s;
@@ -463,7 +466,7 @@ section.intro {
   fill: #00fde8;
 }
 section.about {
-  background: #20232a;
+  background: #282c34;
   padding: 70px 20px;
 }
 h2.title {
@@ -477,7 +480,7 @@ h2.title::after {
   content: "";
   height: 2px;
   width: 150px;
-  background: #d00000;
+  background: #ff3146;
   margin: 12px auto 24px;
   z-index: 5;
   display: block;
@@ -492,6 +495,7 @@ p.subtitle {
   margin: 100px auto 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .about__text p {
   font-size: 18px;
@@ -506,8 +510,9 @@ p.subtitle {
   margin-left: 30px;
   position: relative;
   overflow: hidden;
-  width: 300px;
-  min-width: 250px;
+  height: 300px;
+  min-width: 300px;
+  border-radius: 50%;
 }
 .about__img img {
   position: absolute;
@@ -654,12 +659,12 @@ a.show-btn {
   font-size: 16px;
   color: #fff;
   letter-spacing: 3px;
-  border: 2px solid #d00000;
+  border: 2px solid #ff3146;
   cursor: pointer;
   transition: 0.5s;
 }
 a.show-btn:hover {
-  background: #d00000;
+  background: #ff3146;
   letter-spacing: 5px;
 }
 .works-deco-cross {
@@ -805,12 +810,14 @@ footer {
     transition: 0.5s;
     flex-direction: column;
     position: fixed;
-    /* top: -100%; */
-    top: 0;
+    top: -100vh;
+    /* top: 0; */
+    opacity: 0;
     overflow-y: hidden;
-    display: none;
+    display: flex;
     left: 0;
     width: 100%;
+    height: 100vh;
     transition: 0.5s;
     min-height: 0;
     justify-content: space-evenly;
@@ -849,6 +856,11 @@ footer {
     flex-direction: column;
     margin-top: 70px;
   }
+  .about__img {
+    order: -1;
+    min-width: 250px;
+    height: 250px;
+  }
   .skills {
     margin: 70px auto 30px;
   }
@@ -886,6 +898,10 @@ footer {
   }
   header nav .logo {
     font-size: 36px;
+  }
+  header .switcher svg {
+    width: 24px;
+    height: 14px;
   }
   .intro__inner {
     flex-direction: column;
