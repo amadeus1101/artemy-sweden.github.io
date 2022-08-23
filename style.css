@@ -11,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   scroll-behavior: smooth;
+  background: #20232a;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -468,6 +469,7 @@ section.intro {
 section.about {
   background: #282c34;
   padding: 70px 20px;
+  clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 0 100%, 0 5%);
 }
 h2.title {
   font-size: 48px;
@@ -566,6 +568,7 @@ section.works {
   background: #282c34;
   position: relative;
   overflow-x: hidden;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0 95%);
 }
 
 .works__inner {
@@ -860,6 +863,7 @@ footer {
     order: -1;
     min-width: 250px;
     height: 250px;
+    margin-left: 0;
   }
   .skills {
     margin: 70px auto 30px;
@@ -959,5 +963,9 @@ footer {
   }
   .footer__content ul li {
     padding: 0 8px;
+  }
+  .about__img {
+    min-width: 200px;
+    height: 200px;
   }
 }
