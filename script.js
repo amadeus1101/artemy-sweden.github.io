@@ -15,6 +15,23 @@ window.addEventListener("scroll", function () {
   //   }%`;
   // }
 });
+var isWorksHidden = true;
+function showWorksFunc() {
+  let workItem = document.querySelectorAll(".hidden-item");
+  let btn = document.querySelector(".show-btn");
+  if (isWorksHidden) {
+    for (let i = 0; i < workItem.length; i++) {
+      workItem[i].style.display = "block";
+    }
+    btn.innerHTML = "Close";
+  } else {
+    for (let i = 0; i < workItem.length; i++) {
+      workItem[i].style.display = "none";
+    }
+    btn.innerHTML = "Show more";
+  }
+  isWorksHidden = !isWorksHidden;
+}
 let skills = document.getElementById("first-ph");
 let menu = document.querySelector(".menu");
 let nav = document.querySelector(".navigation");
