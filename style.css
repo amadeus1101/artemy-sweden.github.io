@@ -217,7 +217,7 @@ section.intro {
 }
 
 .btn {
-  transition: border-color 0.5s linear 0.75s;
+  transition: border-color 0.4s linear 0.75s;
   padding: 14px 52px;
   font-size: 18px;
   display: inline-block;
@@ -239,7 +239,7 @@ section.intro {
   height: calc(100% - 10px);
   top: 5px;
   left: -3px;
-  background: #282c34;
+  background: #20232a;
   transform: scaleY(1);
 }
 .btn::after {
@@ -250,7 +250,7 @@ section.intro {
   width: calc(100% - 10px);
   left: 5px;
   top: -3px;
-  background: #282c34;
+  background: #20232a;
   transform: scaleX(1);
 }
 .btn:hover::before {
