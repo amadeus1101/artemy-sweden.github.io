@@ -559,6 +559,7 @@ section.works {
   padding: 70px 20px;
   background: #282c34;
   position: relative;
+  overflow-x: hidden;
 }
 
 .works__inner {
@@ -662,19 +663,21 @@ a.show-btn:hover {
 }
 .works-deco-cross {
   position: absolute;
-  top: -27%;
-  right: -3%;
+  top: -35vh;
+  right: -3vw;
   font-size: 164px;
   font-weight: 700;
   color: #fff;
   text-shadow: -7px 0px #00fde8, 7px 0 #ff3146;
   pointer-events: none;
   user-select: none;
+  z-index: 3;
 }
 .works-deco-line {
   position: absolute;
-  top: -2%;
-  left: 3%;
+  top: -2vh;
+  left: 3vw;
+  z-index: 3;
 }
 .works-deco-line svg {
   width: 200px;
@@ -771,6 +774,22 @@ footer {
   .skills .skill-item img {
     width: 44px;
   }
+  .footer__content .logo {
+    font-size: 96px;
+  }
+}
+@media (max-width: 900px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+  .footer__content:first-child {
+    order: 1;
+    margin-top: 20px;
+  }
+  .footer__content:last-child {
+    margin-top: 30px;
+    text-align: center;
+  }
 }
 @media (max-width: 767.98px) {
   header nav ul {
@@ -829,15 +848,24 @@ footer {
   }
   h2.title {
     font-size: 36px;
+    z-index: 8;
   }
   p.subtitle {
     font-size: 18px;
+    z-index: 8;
   }
   .hidden-item {
     display: none;
   }
   a.show-btn {
     display: inline-block;
+  }
+  .works-deco-cross {
+    font-size: 128px;
+    top: -30vh;
+  }
+  .works-deco-line svg {
+    width: 150px;
   }
 }
 @media (max-width: 560px) {
@@ -881,13 +909,27 @@ footer {
   .skills .skill-item {
     margin: 10px 15px;
   }
+  .works-deco-cross {
+    font-size: 98px;
+  }
   section.about,
   section.works {
     padding: 40px 20px;
+  }
+  .footer__content ul li {
+    padding: 0 15px;
+  }
+  .footer__content:nth-child(2) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 @media (max-width: 374.98px) {
   .intro__text h1 {
     font-size: 40px;
+  }
+  .footer__content ul li {
+    padding: 0 8px;
   }
 }
