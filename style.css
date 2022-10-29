@@ -39,6 +39,7 @@ header {
   justify-content: center;
   padding: 0 50px;
   transition: 0.5s;
+  background: #20232a;
 }
 header nav {
   width: 1440px;
@@ -91,6 +92,9 @@ header.sticky {
   background: #282c34;
   transition: 0.5s;
 }
+header.header-second {
+  background-color: #20232a;
+}
 .menu {
   width: 24px;
   height: 24px;
@@ -135,9 +139,18 @@ header .switcher svg {
 header .switcher svg circle {
   transition: 0.5s;
 }
-header .switcher svg:hover circle {
+header .switcher.light svg circle {
   transform: translateX(24px);
 }
+header .switcher.light svg circle {
+  fill: #20232a;
+}
+header .switcher.light svg rect {
+  stroke: #20232a;
+}
+/* header .switcher svg:hover circle {
+  transform: translateX(24px);
+} */
 section.intro {
   background: #20232a;
   width: 100%;
@@ -496,6 +509,7 @@ p.subtitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .about__text p {
   font-size: 18px;
@@ -542,6 +556,31 @@ p.subtitle {
 }
 .about__deco span:first-child {
   text-shadow: -3px -2px #00fde8, 4px 1px #ff3146;
+}
+.about-triangle,
+.about-line,
+.about-ellipse {
+  position: absolute;
+  transition: 0.5s;
+}
+.about-line {
+  transform: rotate(90deg);
+  left: -132px;
+  top: 156px;
+  width: 200px;
+}
+.about-ellipse {
+  top: 0;
+  right: 15vw;
+  width: 36px;
+  opacity: 0.5;
+}
+
+.about-triangle {
+  top: 30vh;
+  right: 25vw;
+  width: 36px;
+  opacity: 0.5;
 }
 .skills {
   max-width: 1440px;
@@ -678,12 +717,14 @@ a.show-btn:hover {
   pointer-events: none;
   user-select: none;
   z-index: 3;
+  transition: 0.5s;
 }
 .works-deco-line {
   position: absolute;
   top: -2vh;
   left: 3vw;
   z-index: 3;
+  transition: 0.5s;
 }
 .works-deco-line svg {
   width: 200px;
@@ -765,7 +806,7 @@ footer {
 }
 /**          media            */
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1024px) {
   .intro__deco .line {
     display: none;
   }
@@ -785,11 +826,20 @@ footer {
   .works__item {
     width: 300px;
   }
+  .works-deco-cross {
+    font-size: 124px;
+  }
   .skills .skill-item img {
     width: 44px;
   }
   .footer__content .logo {
     font-size: 96px;
+  }
+  .about-triangle {
+    top: 42vh;
+  }
+  .about-ellipse {
+    right: 3vw;
   }
 }
 @media (max-width: 900px) {
@@ -797,7 +847,6 @@ footer {
     flex-direction: column;
   }
   .footer__content:first-child {
-    order: 1;
     margin-top: 20px;
   }
   .footer__content:last-child {
@@ -805,7 +854,7 @@ footer {
     text-align: center;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   header nav ul {
     transition: 0.5s;
     flex-direction: column;
@@ -882,6 +931,13 @@ footer {
   .hidden-item {
     display: none;
   }
+  .about-triangle {
+    top: -2vh;
+    left: 10vw;
+  }
+  .about-ellipse {
+    top: 15vh;
+  }
   a.show-btn {
     display: inline-block;
   }
@@ -954,7 +1010,7 @@ footer {
     flex-direction: column;
   }
 }
-@media (max-width: 374.98px) {
+@media (max-width: 375px) {
   .intro__text h1 {
     font-size: 40px;
   }

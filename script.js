@@ -3,6 +3,11 @@ window.addEventListener("scroll", function () {
 
   var sliderSpeed = 30;
   header.classList.toggle("sticky", window.scrollY > 0);
+  if (window.scrollY > window.innerHeight) {
+    header.classList.add("header-second");
+  } else {
+    header.classList.remove("header-second");
+  }
   // if (
   //   window.scrollY > window.innerHeight * 1.1 &&
   //   window.screenY < window.innerHeight * 2
@@ -172,3 +177,8 @@ window.onload = function () {
     }
   }
 };
+
+function changeTheme() {
+  let switcher = document.querySelector(".switcher");
+  switcher.classList.toggle("light");
+}
